@@ -120,7 +120,7 @@ body {
 .header::after {
   position: absolute;
   content: "";
-  background-image: url(/images/back.png);
+  background-image: url(images/back.png);
   background-repeat: no-repeat;
   background-size: contain;
   right: -36vw;
@@ -619,7 +619,7 @@ h3 {
 .clients::after {
   position: absolute;
   content: "";
-  background-image: url(/images/back.png);
+  background-image: url(images/back.png);
   background-repeat: no-repeat;
   background-size: contain;
   left: -18px;
@@ -1117,7 +1117,7 @@ h3 {
 .process-grid::after {
   position: absolute;
   content: "";
-  background-image: url(/images/back.png);
+  background-image: url(images/back.png);
   background-repeat: no-repeat;
   background-size: contain;
   right: -18px;
@@ -1475,7 +1475,7 @@ footer .logo img {
 .section::after {
   position: absolute;
   content: "";
-  background-image: url(/images/back.png);
+  background-image: url(images/back.png);
   background-repeat: no-repeat;
   background-size: contain;
   right: -36vw;
