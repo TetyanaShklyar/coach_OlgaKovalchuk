@@ -1129,7 +1129,7 @@ h3 {
 }
 
 #reviews {
-  background-image: url(/images//about-back.jpg);
+  background-image: url(images//about-back.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
