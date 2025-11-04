@@ -1884,7 +1884,6 @@ footer .logo img {
   font-size: 22px;
   cursor: pointer;
 }
-
 .popup-overlay {
   position: fixed;
   top: 0;
@@ -1896,15 +1895,23 @@ footer .logo img {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding: 20px; /* відступи, щоб не прилипав до країв */
+  overflow-y: auto; /* дозволяє скрол, якщо контент перевищує висоту */
 }
+
 .popup-content {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  max-width: max-content;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  animation: popupShow 0.3s ease;
 }
+
 .popup-close {
   position: absolute;
   right: 15px;
@@ -1913,19 +1920,59 @@ footer .logo img {
   border: none;
   font-size: 28px;
   cursor: pointer;
+  color: #444;
+  transition: 0.3s;
 }
+.popup-close:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
 .popup-body img {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
-  margin-bottom: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
 .popup-body p {
   font-size: 17px;
   color: #444;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .popup-body video {
-  max-height: 500px;
+  max-height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+@keyframes popupShow {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup-content {
+    padding: 20px;
+    max-width: 95%;
+    max-height: 85vh;
+  }
+
+  .popup-body p {
+    font-size: 15px;
+  }
+
+  .popup-close {
+    font-size: 24px;
+  }
 }
